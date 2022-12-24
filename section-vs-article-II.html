@@ -1,0 +1,103 @@
+<!DOCTYPE html>
+<html lang="ES">
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>section vs article II</title>
+</head>
+<body>
+    <header>
+        <h1>NOTICIAS NACIONALES</h1>
+    </header>
+    <main>
+        <section>
+            <h2>Noticias del día</h2>
+            <article>Noticia 1</article>
+            <article>Noticia 2</article>
+            <article>Noticia 3</article>
+        </section>
+        <footer>pie de página</footer>
+        <p> --- Este ejemplo 1 es semánticamente erróneo... Al validar en https://validator.w3.org/#validate_by_input+with_options los article requieren encabezados.</p>
+    </main>
+    
+    <header>
+        <h1>NOTICIAS NACIONALES</h1>
+    </header>
+    <main>
+        <section>
+            <h2>Noticias del día</h2>
+            <article>
+                <h3>Noticia 1</h3>
+                <p>Lorem ipsum dolor sit amet, consectetur adipisicing elit. Dolorem dignissimos consectetur excepturi error quod in tenetur necessitatibus consequuntur, eligendi culpa adipisci beatae expedita est soluta. Voluptatem numquam corporis nemo reprehenderit.</p>
+            </article>
+            <article>
+                <h3>Noticia 2</h3>
+                <p>Lorem ipsum dolor sit amet, consectetur adipisicing elit. Dolorem dignissimos consectetur excepturi error quod in tenetur necessitatibus consequuntur, eligendi culpa adipisci beatae expedita est soluta. Voluptatem numquam corporis nemo reprehenderit.</p>
+            </article>
+            <article>
+                <h3>Noticia 3</h3>
+                <p>Lorem ipsum dolor sit amet, consectetur adipisicing elit. Dolorem dignissimos consectetur excepturi error quod in tenetur necessitatibus consequuntur, eligendi culpa adipisci beatae expedita est soluta. Voluptatem numquam corporis nemo reprehenderit.</p>
+            </article>
+        </section>
+        <footer>pie de página</footer>
+        <p>--- Ejemplo 2 semánticamente correcto... validar en https://validator.w3.org/#validate_by_input+with_options los article tienen encabezados.</p>
+    </main>
+    
+    <header>
+        <h1>NOTICIAS NACIONALES</h1>
+    </header>
+    <main>
+        <section>
+            <h2>Noticias del día</h2>
+            <article>
+                <h3>Noticia 1</h3>
+                <p>Lorem ipsum dolor sit amet, consectetur adipisicing elit. Dolorem dignissimos consectetur excepturi error quod in tenetur necessitatibus consequuntur, eligendi culpa adipisci beatae expedita est soluta. Voluptatem numquam corporis nemo reprehenderit.</p>
+                <footer>Autor de la publicación</footer>
+            </article>
+            <article>
+                <h3>Noticia 2</h3>
+                <p>Lorem ipsum dolor sit amet, consectetur adipisicing elit. Dolorem dignissimos consectetur excepturi error quod in tenetur necessitatibus consequuntur, eligendi culpa adipisci beatae expedita est soluta. Voluptatem numquam corporis nemo reprehenderit.</p>
+                <footer>Autor de la publicación</footer>
+            </article>
+            <article>
+                <h3>Noticia 3</h3>
+                <p>Lorem ipsum dolor sit amet, consectetur adipisicing elit. Dolorem dignissimos consectetur excepturi error quod in tenetur necessitatibus consequuntur, eligendi culpa adipisci beatae expedita est soluta. Voluptatem numquam corporis nemo reprehenderit.</p>
+                <footer>Autor de la publicación</footer>
+            </article>
+        </section>
+        <footer>pie de página</footer>
+        <p>--- Ejemplo 3 semánticamente correcto... validar en https://validator.w3.org/#validate_by_input+with_options los article tienen encabezados y pie de página (esto es opcional).</p>
+    </main>
+    
+    <header>
+        <h1>NOTICIAS NACIONALES</h1>
+    </header>
+    <main>
+        <section>
+            <h2>Section como contenedor</h2>
+                <section>
+                    <h3>Noticias del día</h3>
+                <article>
+                    <h4>Noticia 1</h4>
+                    <p>Lorem ipsum dolor sit amet, consectetur adipisicing elit. Dolorem dignissimos consectetur excepturi error quod in tenetur necessitatibus consequuntur, eligendi culpa adipisci beatae expedita est soluta. Voluptatem numquam corporis nemo reprehenderit.</p>
+                    <footer>Autor de la publicación</footer>
+                </article>
+                <article>
+                    <h4>Noticia 2</h4>
+                    <p>Lorem ipsum dolor sit amet, consectetur adipisicing elit. Dolorem dignissimos consectetur excepturi error quod in tenetur necessitatibus consequuntur, eligendi culpa adipisci beatae expedita est soluta. Voluptatem numquam corporis nemo reprehenderit.</p>
+                    <footer>Autor de la publicación</footer>
+                </article>
+                <article>
+                    <h4>Noticia 3</h4>
+                    <p>Lorem ipsum dolor sit amet, consectetur adipisicing elit. Dolorem dignissimos consectetur excepturi error quod in tenetur necessitatibus consequuntur, eligendi culpa adipisci beatae expedita est soluta. Voluptatem numquam corporis nemo reprehenderit.</p>
+                    <footer>Autor de la publicación</footer>
+                </article>
+            </section>
+            
+        </section>
+        <footer>pie de página</footer>
+        <p>--- Ejemplo 4 semánticamente correcto... validar en https://validator.w3.org/#validate_by_input+with_options Se anidó una section dentro de otra.</p>
+    </main>
+</body>
+</html>
