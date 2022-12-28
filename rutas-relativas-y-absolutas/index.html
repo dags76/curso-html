@@ -1,0 +1,35 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document</title>
+</head>
+<body>
+    <h1>HOME</h1>
+    <h2>Rutas absolutas</h2>
+    <p>Tienen protocolo http o https y son únicas en la red. Se suelen utilizrar oara rutas externas.</p>
+    <a href="https://google.com" target="_blank">ir a google</a>
+    <h2>Rutas relativas</h2>
+    <p>No usan protocolo </p> <p>Pueden ser relativas al punto donde nos encontramos o a la raíz del proyecto</p>
+    <p>Si el recursos se encuentra en el mismo nivel, es decir, en la misma carpeta, pondremos unicamente el nombre del archivo. <a href="../enlaces.html" target="_blank">Ver ejemplo en el documento enlaces.html</a></p>
+    <p> Si necesitamos salir de la carpeta actual usaremos puntos y diagonal ../ y se pone uno por cada nivel  (carpeta de la que queremos salir). Ejemplo :</p>
+
+    < a href="../enlaces.html" target="_blank" > Ver ejemplo en el documento enlaces.html< /a>
+
+    <p>dicho enlace nos saca de la carpeta actual para poder ubicar el archivo enlace, html que se encuentra en el nivel superior.</p>
+    <p>La mejor forma de hacerlo es yendo a la raíz del proyecto iniciando con una barra, y desde allí establecer la ruta. Ejemplo:</p>
+    < a href="/rutas-relativas-y-absolutas/paginas.html/contacto.html">ir a contactos< /a>
+    <p><a href="/rutas-relativas-y-absolutas/paginas/contacto.html">ir a contactos</a></p>
+    <h2>Rutas con anclas</h2>
+    <p>Se puede navegar entre las páginas del sitio web a través de anclas al incluir el numerar más el id en la ruta relativa.</p>
+    <nav>
+        <p><a href="paginas/navegacion-por-anclas.html#post-4">ir al post 4</a></p>
+       
+    </nav>
+
+    
+
+</body>
+</html>

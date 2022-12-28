@@ -1,0 +1,45 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <style>
+        .p1{
+            color: blue;
+        }
+    </style>
+    <title>Document</title>
+</head>
+<body>
+    <h1>ATRIBUTOS</h1>
+    <P>Son valores adicionales que configuran los elementos y ajustan su comportamiento.</P>
+    <h2>Atributos comunes</h2>
+    <p>Sintaxis:<p>
+    <p>
+        < etiqueta atributo= "valor" >< / etiqueta >
+    </p>
+    <p>Ejemplo: < meta charset="utf-8"/></p>
+    <h2>Atributos booleanos</h2>
+    <p>No llevan valor... Sintaxis: </p>
+    <p>
+        < etiqueta atributo >< / etiqueta >
+    </p>
+    <h2>Algunos stributos globales disponibles para html</h2>
+    <h3>class (clases)</h3>
+    <p class="p1">Se usa para dar estilos a través de css. El color azul de este párrafo se dio por medio de la clase p1 en la etiqueta p y css.</p>
+    <h3>id (identificador)</h3>
+    <p id="p2"> <strong>Es un identificador único (no se puede repetir)</strong> que se utiliza para seleccionar el elemento desde JS y para hacer navegación a través de anclas</p>
+    <h3>title (título con tooltip)</h3>
+    <p title="este es un ejemplo del atributo title">Es un atributo que ayuda a la accesibilidad mostrando una descripción del elemento al que pertenece. Se visualiza al colocar el cursor (mouse) sobe el elemento.</p>
+    <h3>data (datos pasados en la etiqueta)</h3>
+    <p id="pd" data-ejemplo="ejemplo de un data">Es un atributo que nos permite guardar algún valor en la ertiqueta html. Se trabaja con JS.</p>
+    <script>
+        const P = document.getElementById("p2")
+        const pd = document.getElementById("pd")
+        console.log(p2.textContent)
+        console.log(pd.dataset.ejemplo)
+
+    </script>
+</body>
+</html>
