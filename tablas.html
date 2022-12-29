@@ -1,0 +1,84 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <style>
+        col{
+            background-color: aqua;
+        }
+        col:nth-child(2){
+            background-color: greenyellow;
+        }
+    </style>
+    <title>Document</title>
+</head>
+<body>
+    <h1>TABLAS</h1>
+    <!-- ETIQUETA DE LAS TABLAS "table" dentro de la cual va la etiqueta tr anidando la etiqueta td -->
+    <table>
+        <!-- etiqueta para seleccionar grupos de columnas. Cada col equivale a una columna en orden consecutivo. El atributo span permite seleccionar grupos de columnas -->
+        <colgroup>
+            <col>
+            <col span="5">
+        </colgroup>
+        <!-- etiqueta para dar título a la tabla -->
+        <caption>HORARIO DE CLASES</caption>
+        <!-- etiqueta para la cabecera... opcional -->
+        <thead>
+            <tr>
+                <!-- se coloca th en vez de td -->
+                <th>Hora/Día</th>
+                <th>Lunes</th>
+                <th>Martes</th>
+                <th>Miércoles</th>
+                <th>Jueves</th>
+                <th>Viernes</th>
+            </tr>
+        </thead>
+        <!-- si s usa la etiqueta de cabecera ha de usarse esta para designar el cuerpo de la tabla -->
+        <tbody>
+            <tr>
+                <td>07:00 - 08:30</td>
+                <td>Inglés</td>
+                <!-- se usa un atributo para seleccionar grupos de celdas -->
+                <td rowspan="2">Física</td>
+                <td>Miércoles</td>
+                <td>Jueves</td>
+                <td>Viernes</td>
+            </tr>
+            <tr>
+                <td>08:30 - 10:00</td>
+                <td>Matemática</td>
+                <td>Miércoles</td>
+                <td>Jueves</td>
+                <td>Viernes</td>
+            </tr>
+            <tr>
+                <td>10:00 - 10:30</td>
+                <!-- se usa el atributo colspan para seleccionar grupos de columnas en esta celda -->
+                <td colspan="5
+                ">RECREO</td>
+            </tr>
+            <tr>
+                <td>10:30 - 12:00</td>
+                <td>GHC</td>
+                <td>FSN</td>
+                <td>Miércoles</td>
+                <td>Jueves</td>
+                <td>Viernes</td>
+            </tr>
+        </tbody>
+        <!-- etiqueta totalmente opcional. Pie de tabla -->
+        <tfoot>
+            <tr>
+                <td colspan="6">
+                primer periodo
+                </td>
+            </tr>
+        </tfoot>
+    </table>
+
+</body>
+</html>
