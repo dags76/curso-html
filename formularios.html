@@ -5,6 +5,17 @@
     <meta http-equiv="X-UA-Compatible" content="IE=edge">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
     <title>Document</title>
+    <style>
+        h4{
+            margin-bottom: 0px;
+        }
+        p{
+            margin: 0;
+        }
+        h3{
+            color: crimson;
+        }
+    </style>
 </head>
 <body>
     <h1>Formulartios</h1>
@@ -38,10 +49,16 @@
 
     <h2>Algunos input type</h2>
 
-    <h3>botones </h3>
+    <h4>text</h4>
+    <p>Es el valor por defecto... para introducir textos</p>
+    <form>
+        <input>
+    </form>
+
+    <h3>input type para trabajar con botones </h3>
 
     <h4>button</h4>
-    <p>Es igual al botón enviar visualmente, pero no envìa formularios</p>
+    <span>Es igual al botón enviar visualmente, pero no envìa formularios</span>
     <form>
         <input type="button" value="input button">
     </form>
@@ -50,6 +67,12 @@
     <p>Se utiliza para enviar formularios</p>
     <form>
         <input type="submit">
+    </form>
+
+    <h4>reset</h4>
+    <p>resetea el formulario. Se suele usar al lado del submit</p>
+    <form>
+        <input type="reset">
     </form>
 
     <h3>type input para trabajar con fechas</h3>
@@ -84,62 +107,99 @@
         <input type="week">
     </form>
 
-    <h3>importantes</h3>
+    <h3>inputs type de uso frecuentes</h3>
 
     <h4>search</h4>
+    <p>Se utiliza para las barras de busqueda</p>
     <form>
         <input type="search">
+        <button>buscar</button>
     </form>
 
     <h4>tel</h4>
+    <p>Npúmero telefónico</p>
     <form>
         <input type="tel">
     </form>
 
     <h4>pasword</h4>
+    <p>contraseña</p>
     <form>
         <input type="password">
     </form>
 
     <h4>email</h4>
+    correo electrónico
     <form>
         <input type="email">
     </form>
 
     <h4>url</h4>
+    <p>Dirección web</p>
     <form>
         <input type="url">
     </form>
-
-    <!-- <h4>hidden</h4>
-    <form>
-        <input>
-    </form>
     
     <h4>number</h4>
+    <p>Solo admite valores numéricos</p>
     <form>
-        <input>
+        <input type="number">
     </form>
+
+    <h2>Type inputs varios</h2>
 
     <h4>range</h4>
+    <p>Muestra una barra para seleccionar un rango. Tiene dos atributos: step y min y max</p>
     <form>
-        <input>
-    </form>
-
-    <h4>reset</h4>
-    <form>
-        <input>
-    </form>
-
-    <h4>text</h4>
-    <form>
-        <input>
+        <input type="range" step="3" min="5" max="22">
     </form>
 
     <h4>color</h4>
+    <p>Para seleccionar un color</p>
     <form>
-        <input>
-    </form> -->
+        <input type="color">
+    </form>
+
+    <h4>hidden</h4>
+    <p>Campo oculto, puede contener valores, pero no se mostrarán.</p>
+    <form>
+        <input type="hidden">
+    </form>
+
+    <h2>type inputs de tipo seleccionables</h2>
+
+    <h4>radio</h4>
+    <p>Permite seleccionar una única opción de una lista de opciones relacionadas. atributos : name con el mismo valor para todas los inputs, value para indicar el valor de cada input en particular, checked para marcar oor defecto una opción si se amerita.</p>
+    <form>
+        <p>Indica tu género:</p>
+        <label for="masculino">Masculino</label>
+        <input value="masculino" id="masculino" name="genero" type="radio">
+
+        <label for="femenino">Femenino</label>
+        <input value="femenino" id="femenino" name="genero" type="radio">
+
+        <label for="otro">otro</label>
+        <input value="otro" id="otro" name="genero" type="radio">
+    </form>
+    <h4>checkbox</h4>
+    <p>Permite seleccionar varias opciones de una lista de opciones relacionadas. Loa atributos name, value (siempre van en todos los inputs de cualquier tipo) y checked.</p>
+    <form>
+        <p>Indica cuál lenguaje conoces</p>
+        <label>HTML
+            <input name="lenguajes" value="html" type="checkbox" checked>
+        </label>
+        <label>CSS
+            <input name="lenguajes" value="css" type="checkbox">
+        </label>
+        <label>JS
+            <input name="lenguajes" value="js" type="checkbox">
+        </label>
+    </form>
+    <h4>select</h4>
+    <p>Realmente es una etiqueta a parte, pero permite seleccionar una o varias opciones de una lista.</p>
+    <p>Cada opción irá dentro de una etiqueta option.</p>
+    <p>Sin muchas opciones se pueden agrupar mediante la etiqueta opgroup con el atributo label para nombrar la categoría.</p>
+    
     
 </body>
 </html>
