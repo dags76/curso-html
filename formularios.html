@@ -1,0 +1,145 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document</title>
+</head>
+<body>
+    <h1>Formulartios</h1>
+    <h2>Estructura básica de los formularios</h2>
+    <h3>Estructura A</h3>
+    <!-- <form>
+            <label></label>
+            <input>
+            <button></button>
+        </form> 
+    Requiere los atributos for e id para vincular label con el input. Tales atributos debn contener el mismo valor-->
+        <form>
+            <label for="nombre">Nombre</label>
+            <input id="nombre" placeholder="Escribe tu nombre">
+            <button type="submit">Enviar</button>
+        </form>
+    <h3>Estructura B</h3>
+        <!-- <form>
+            <label>
+                <input>
+            </label>
+            <button></button>
+        </form> 
+    Al estar la etiqueta input anidada en el label se vincular por defecto. No es conveniente porque a la hora de dar estilos es màs difícil-->
+    <form>
+        <label>Nombre
+            <input placeholder="Escribe tu nombre">
+        </label>
+        <button type="submit">Enviar</button>
+    </form>
+
+    <h2>Algunos input type</h2>
+
+    <h3>botones </h3>
+
+    <h4>button</h4>
+    <p>Es igual al botón enviar visualmente, pero no envìa formularios</p>
+    <form>
+        <input type="button" value="input button">
+    </form>
+
+    <h4>submit</h4>
+    <p>Se utiliza para enviar formularios</p>
+    <form>
+        <input type="submit">
+    </form>
+
+    <h3>type input para trabajar con fechas</h3>
+
+    <h4>date</h4>
+    <p>campo para introducir fechas</p>
+    <form>
+        <input type="date">
+    </form>
+
+    <h4>time</h4>
+    <p>Para introducir una hora</p>
+    <form>
+        <input type="time">
+    </form>
+    
+    <h4>datetime-local</h4>
+    <p>fechas y horas. Combina input date con input time... pero no funciona en firefox. Es por ello que se recomienda usar los type input date y time para tal fin</p>
+    <form>
+        <input type="datetime-local">
+    </form>
+
+    <h4>mont</h4>
+    <p>Para intrucir un mes</p>
+    <form>
+        <input type="month">
+    </form>
+
+    <h4>week</h4>
+    <p>Para selecionar una semana</p>
+    <form>
+        <input type="week">
+    </form>
+
+    <h3>importantes</h3>
+
+    <h4>search</h4>
+    <form>
+        <input type="search">
+    </form>
+
+    <h4>tel</h4>
+    <form>
+        <input type="tel">
+    </form>
+
+    <h4>pasword</h4>
+    <form>
+        <input type="password">
+    </form>
+
+    <h4>email</h4>
+    <form>
+        <input type="email">
+    </form>
+
+    <h4>url</h4>
+    <form>
+        <input type="url">
+    </form>
+
+    <!-- <h4>hidden</h4>
+    <form>
+        <input>
+    </form>
+    
+    <h4>number</h4>
+    <form>
+        <input>
+    </form>
+
+    <h4>range</h4>
+    <form>
+        <input>
+    </form>
+
+    <h4>reset</h4>
+    <form>
+        <input>
+    </form>
+
+    <h4>text</h4>
+    <form>
+        <input>
+    </form>
+
+    <h4>color</h4>
+    <form>
+        <input>
+    </form> -->
+    
+</body>
+</html>
