@@ -75,6 +75,12 @@
         <input type="reset">
     </form>
 
+    <h4>file</h4>
+    <form>
+        <p>Para seleccionar y enviar un archivo.</p>
+        <input type="file">
+    </form>
+
     <h3>type input para trabajar con fechas</h3>
 
     <h4>date</h4>
@@ -146,27 +152,7 @@
         <input type="number">
     </form>
 
-    <h2>Type inputs varios</h2>
-
-    <h4>range</h4>
-    <p>Muestra una barra para seleccionar un rango. Tiene dos atributos: step y min y max</p>
-    <form>
-        <input type="range" step="3" min="5" max="22">
-    </form>
-
-    <h4>color</h4>
-    <p>Para seleccionar un color</p>
-    <form>
-        <input type="color">
-    </form>
-
-    <h4>hidden</h4>
-    <p>Campo oculto, puede contener valores, pero no se mostrarán.</p>
-    <form>
-        <input type="hidden">
-    </form>
-
-    <h2>type inputs de tipo seleccionables</h2>
+    <h3>type inputs de tipo seleccionables</h3>
 
     <h4>radio</h4>
     <p>Permite seleccionar una única opción de una lista de opciones relacionadas. atributos : name con el mismo valor para todas los inputs, value para indicar el valor de cada input en particular, checked para marcar oor defecto una opción si se amerita.</p>
@@ -195,11 +181,170 @@
             <input name="lenguajes" value="js" type="checkbox">
         </label>
     </form>
+    <h4>list</h4>
+    <p>desplega una lista seleccionable. Al input añadir el atributo list. Este type input funciona con la etiqueta datalist, el cual se enlaza al imput mediante el atributo id con el mismo valor. Dentro de esta se anida la etiqueta option la cual mostrará la opción mediante el atributo value</p>
+    <p>Elige tu mascota favorita:</p>
+    <form>
+        <input type="list" list="mascotas">
+        <datalist id="mascotas">
+            <option value="dogs"></option>
+            <option value="cats"></option>
+            <option value="bunnys"></option>
+        </datalist>
+        
+    </form>
+
     <h4>select</h4>
     <p>Realmente es una etiqueta a parte, pero permite seleccionar una o varias opciones de una lista.</p>
     <p>Cada opción irá dentro de una etiqueta option.</p>
-    <p>Sin muchas opciones se pueden agrupar mediante la etiqueta opgroup con el atributo label para nombrar la categoría.</p>
-    
+    <p>Sin son muchas opciones se pueden agrupar mediante la etiqueta opgroup con el atributo label para nombrar la categoría. se usa en la etiqueta select el atributo multiple, lo cual permite al usuario , usando la tecla ctrl hacer selección multiple.</p>
+    <p>seleciona tus mascotas favoritas</p>
+    <select name="mascotas" >
+        <optgroup label="cuatro patas">
+            <option value="dog">perros</option>
+            <option value="cat">gatos</option>
+            <option value="bunny">conejos</option>
+        
+        </optgroup>
+        <optgroup label="aves">
+            <option value="loros">loros</option>
+            <option value="canarios">canarios</option>
+            <option value="hen">gallinas</option>
+        </optgroup>
+        <optgroup label="lagartos">
+            <option value="iguana">iguanas</option>
+            <option value="snake">serpientes</option>
+            <option value="camaleones">camaleones</option>
+        </optgroup>
+    </select>
+    <h3>Type inputs varios</h3>
+
+    <h4>range</h4>
+    <p>Muestra una barra para seleccionar un rango. Tiene dos atributos: step y min y max</p>
+    <form>
+        <input type="range" step="3" min="9" max="18">
+    </form>
+
+    <h4>color</h4>
+    <p>Para seleccionar un color</p>
+    <form>
+        <input type="color">
+    </form>
+
+    <h4>hidden</h4>
+    <p>Campo oculto, puede contener valores, pero no se mostrarán.</p>
+    <form>
+        <input type="hidden">
+    </form>
+    <h2>Otros elementos o etiquetas en los formularios</h2>
+    <h4>fielset y legend</h4>
+    <p>fielset se usa para agrupar elementos dentro de un formulario y legend para darle nombre a la misma</p>
+    <form>
+        <fieldset>
+            <legend>Datos personales</legend>
+                <label for="name">nombre</label>
+                <input name="name" type="text"><br>
+                <label for="surname">apellido</label>
+                <input name="surname" type="text">
+            
+        </fieldset>
+    </form>
+
+    <h4>meter</h4>
+    <p>representa un valor dentro de un rango conocido. Atributos: min - max - value - low - high - optimus. Los últimos tres marca los límites con colores.</p>
+    <form>
+        <label for="fuel">combustible</label>
+        <meter id="fuel" min="0" max="100" value="85" low="40" high="80" optimum="100"></meter>
+    </form>
+
+    <h4>progress</h4>
+    <p>De poco uso. representa el progreso de una tarea. </p>
+    <form action="">
+        <label for="tarea">tarea 1</label>
+        <progress id="tarea" max="100" value="80"></progress>
+    </form>
+
+    <h4>textarea</h4>
+    <p>Este es muy común. Se usa para introducir texto en un formulario.</p>
+    <form>
+        <textarea name="" id="" cols="70" rows="10"></textarea>
+    </form>
+
+    <h2>Atributos principales o más usados en formularios</h2>
+
+    <h4>placeholder</h4>
+    <p>Da una pista de lo que el usuario tiene que introducir</p>
+
+    <form>
+        <label for="name">nombres</label>
+        <input type="text" id="neme" name="nombres" placeholder="escribe tus nombres">
+        <button>enviar</button>
+    </form>
+
+    <h4>required</h4>
+    <p>Hace que el campo sea obligatorio. Salta un alerta al clickear el botón de enviar. </p>
+
+    <form>
+        <label for="surname">apellidos</label>
+        <input type="text" id="surneme" name="apellidos" placeholder="escribe tus apellidos" required>
+        <button>enviar</button>
+    </form>
+
+    <h4>readonly</h4>
+    <p>Hace que el campo sea solo de lectura. Se selecciona, pero no se puede escribir ni borrar. El campo se envia. </p>
+
+    <form>
+        <label for="surname">apellidos</label>
+        <input type="text" id="surneme" name="apellidos" readonly value="hola, soy solo lectura">
+        <button>enviar</button>
+    </form>
+
+    <h4>disable</h4>
+    <p>Desactiva el campo, no se podrá escribir en el ni se enviará el campo.</p>
+
+    <form>
+        <label for="surname">apellidos</label>
+        <input type="text" id="surneme" name="apellidos" disabled value="hola, estoy disables">
+        <button>enviar</button>
+    </form>
+
+    <h4>min-max</h4>
+    <p>Estable el mínimo y el máximo de un campo numérico. Se pueden usar individualmente o ambos a la vez.</p>
+
+    <form>
+        <label for="number">números</label>
+        <input type="number" id="number" name="numeros" min="5" max="15">
+        <button>enviar</button>
+    </form>
+
+    <h4>minlenght-maxlenght</h4>
+    <p>Establece el mínimo y el máximo de caracteres de un campo de texto. No se envía hasta alcanzar el mínimo, y no deja pasarse del máximo de caracteres establecido.</p>
+
+    <form>
+        <label for="surname">apellidos</label>
+        <input type="text" id="surneme" name="apellidos" placeholder="escribe tus apellidos" required minlength="7" maxlength="15">
+        <button>enviar</button>
+    </form>
+
+    <h4>selected</h4>
+    <p>Equivale a los checked, establece una opción por defecto en las etiquetas select.</p>
+
+    <p>Selecciona un número:</p>
+    <select name="contar" multiple>
+        <option value="uno">uno</option>
+        <option value="dos">dos</option>
+        <option value="tres" selected>tres</option>
+    </select>
+
+    <h4>autofocus</h4>
+    <p>Para poner el foco por defecto al cargar el formulario.</p>
+
+    <form>
+        <label for="surname">apellidos</label>
+        <input type="text" id="surneme" name="apellidos" placeholder="escribe tus apellidos" required minlength="7" maxlength="15" autofocus>
+        <button>enviar</button>
+    </form>
+
     
 </body>
 </html>
